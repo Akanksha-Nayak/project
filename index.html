@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="location-dropdown" onclick="toggleDropdown()">
+            <div class="location-header" id="locationHeader">LOCATION</div>
+            <div class="location-content" id="locationContent">
+                <button class="close-button" onclick="closeDropdown()">✖</button>
+                <div class="row">
+                    <div class="column">
+                        <h3>Sayaji</h3>
+                        <hr>
+                        <div class="image-grid">
+                            <!-- Images for Sayaji -->
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 1" style="width: 100%;">
+                                <p>SAYAJI INDORE</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 2" style="width: 100%;">
+                                <p>SAYAJI RAJKOT</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 3" style="width: 100%;">
+                                <p>SAYAJI MORBI</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 4" style="width: 100%;">
+                                <p>SAYAJI KOLHAPUR</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 5" style="width: 100%;">
+                                <p>SAYAJI PUNE</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 6" style="width: 100%;">
+                                <p>SAYAJI RAIPUR</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 7" style="width: 100%;">
+                                <p>SAYAJI VADODRA</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="img1.jpg" alt="Sayaji Image 8" style="width: 100%;">
+                                <p>SAYAJI RAJKOT</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3>Enrise</h3>
+                        <hr>
+                        <p>ENRISE AHMEDNAGAR</p>
+                        <p>ENRISE AURANGABAD</p>
+                        <p>ENRISE BHOPAL</p>
+                        <p>ENRISE NAGPUR</p>
+                        <p>ENRISE NASHIK</p>
+                        <p>ENRISE PUNE</p>
+                        <p>ENRISE RAU</p>
+                        <p>ENRISE REWA</p>
+                        <p>ENRISE UDAIPUR</p>
+                    </div>
+                    <div class="column">
+                        <h3>Effotel</h3>
+                        <hr>
+                        <p>EFFOTEL BHOPAL</p>
+                        <p>EFFOTEL INDORE</p>
+                        <p>EFFOTEL VADODRA</p>
+                        <p>EFFOTEL DEHRADUN</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pipe-shaped dropdown -->
+            <div class="pipe-dropdown" id="pipeDropdown">
+                <!-- Search icon -->
+                <div class="search-icon-wrapper">
+                    <div class="search-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27c.98-1.14 1.57-2.65 1.57-4.3 0-3.59-2.91-6.5-6.5-6.5S2 5.14 2 8.73s2.91 6.5 6.5 6.5c1.65 0 3.16-.59 4.3-1.57l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </div>
+                    <div class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27c.98-1.14 1.57-2.65 1.57-4.3 0-3.59-2.91-6.5-6.5-6.5S2 5.14 2 8.73s2.91 6.5 6.5 6.5c1.65 0 3.16-.59 4.3-1.57l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Guest text and arrow mark -->
+                <div class="guest-and-arrow">
+                    <i class="fas fa-user"></i>
+                    Guest
+                    <svg class="arrow-mark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </div>
+                <!-- Rooms -->
+                <div class="rooms">
+                    <div class="bed-icon"><i class="fas fa-bed"></i></div>
+                    <span>Rooms</span>
+                    <svg class="arrow-mark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </div>                
+                <!-- Select your stay duration -->
+                <div class="duration">
+                    <div class="calendar-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <span>Select your stay duration</span>
+                    <svg class="arrow-mark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.querySelector('.location-dropdown');
+            dropdown.classList.toggle('open');
+            var pipeDropdown = document.getElementById('pipeDropdown');
+            pipeDropdown.classList.toggle('open');
+        }
+
+        document.addEventListener('click', function(event) {
+            var dropdown = document.querySelector('.location-dropdown');
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('open');
+                var pipeDropdown = document.getElementById('pipeDropdown');
+                pipeDropdown.classList.remove('open');
+            }
+        });
+
+        function closeDropdown(event) {
+            event.stopPropagation();
+            var dropdown = document.querySelector('.location-dropdown');
+            dropdown.classList.remove('open');
+            var pipeDropdown = document.getElementById('pipeDropdown');
+            pipeDropdown.classList.remove('open');
+        }
+    </script>
+</body>
+</html>

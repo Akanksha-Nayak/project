@@ -1,0 +1,335 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    padding: 10px;
+}
+
+.column h3 {
+    color: whitesmoke;
+    text-decoration: none;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.column hr {
+    border-color: rgb(175,151,107);
+    border-width: 2px;
+}
+
+.column p{
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: "Merriweather", serif;
+}
+
+.location-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.location-header {
+    background-color: #333;
+    color: white;
+    padding: 10px 30px 10px 10px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    width: 4cm;
+    box-sizing: border-box;
+}
+
+.location-header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    display: inline-block;
+}
+
+.location-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.location-dropdown.open .location-content {
+    display: block;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 18px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column h3 {
+    text-decoration: none;
+}
+
+.image-container {
+    margin-bottom: 10px;
+    height: 120px;
+    width: 90%;
+    overflow: hidden;
+}
+
+.image-container p {
+    color: whitesmoke;
+    margin-top: 5px; 
+    font-size: 9.9px; 
+    white-space: nowrap; /*single line */
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    justify-content: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.pipe-dropdown {
+    position: absolute;
+    top: calc(100% + 60px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.location-content {
+    position: relative; 
+}
+
+.location-dropdown.open .pipe-dropdown {
+    display: block;
+}
+
+/* Hide the location header */
+.location-header {
+    display: none;
+}
+
+/* Display the location header when dropdown is closed */
+.location-dropdown:not(.open) .location-header {
+    display: block;
+}
+
+.search-icon-wrapper {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon-circle {
+    width: 25px;
+    height: 25px;
+    background-color: gainsboro;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5px;
+}  
+
+.search-icon {
+    position: relative;
+    z-index: 1;
+    fill: #fff;
+}
+
+.guest-and-arrow {
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-mark {
+    margin-left: 5px;
+}
+
+.rooms {
+    position: absolute;
+    top: 10px;
+    right: 190px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.duration {
+    position: absolute;
+    top: 10px;
+    left: 40px; 
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-icon, .bed-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.guest-and-arrow i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Adjust the width for Sayaji */
+.column:nth-child(1) .image-container {
+    width: 95%; 
+}
+
+/* Increase the padding for the images */
+.column .image-container img {
+    padding: -30px; 
+}
+
+.location-header {
+    width: 4cm;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .column {
+        width: 50%;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .location-header {
+        padding: 10px;
+    }
+
+    .location-header::after {
+        right: 5px;
+    }
+
+    .location-content {
+        padding: 5px;
+    }
+
+    .column {
+        padding: 5px;
+    }
+
+    .pipe-dropdown {
+        /* Adjust styles for smaller screens */
+        top: calc(100% + 30px);
+        width: 90%;
+        padding: 10px;
+    }
+
+    /* Adjust styles for elements inside the pipe-dropdown */
+    .search-icon-wrapper,
+    .guest-and-arrow,
+    .rooms,
+    .duration {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    /* Adjust styles for smaller icons inside pipe-dropdown */
+    .search-icon,
+    .bed-icon,
+    .calendar-icon {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .location-header {
+        padding: 10px;
+    }
+
+    .location-header::after {
+        right: 5px;
+    }
+
+    .location-content {
+        padding: 5px;
+    }
+
+    .column {
+        padding: 5px;
+    }
+
+    @media screen and (max-width: 480px) {
+        .pipe-dropdown {
+            top: calc(100% + 20px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            z-index: 999;
+            max-height: none;
+            overflow: visible;
+            display: none;
+        }
+    
+        .location-dropdown.open .pipe-dropdown {
+            display:block;
+        }
+    }    
+}
